@@ -33,7 +33,7 @@
                 document.getElementById("form").innerHTML = "These " + adjective + " " + noun + " " + verb + " " + adverb + " to the store.";
             });
             /*show user input from form*/
-            document.getElementById("submit").addEventListener("click", function(event){
+            document.getElementById("submitbtn").addEventListener("click", function(event){
             event.preventDefault();
             var noun = document.getElementById("noun").value;
             var verb = document.getElementById("verb").value;
@@ -43,9 +43,6 @@
         });
             /*show user input from form*/   
                
-    </script>
-≈    <script>
-        
     </script>
 
     <div id="formDiv"> 
@@ -60,7 +57,7 @@
             <input type="text" id="adjective" name="adjective"><br><br>
             <label for="adverb">Adverb:</label>
             <input type="text" id="adverb" name="adverb"><br><br>
-            <button onclick="myFunction() id='submit'>submit</button>
+            <button onclick="myFunction() id='submitbtn'>submit</button>
             <!--display form -->
         </form>
         </div>
