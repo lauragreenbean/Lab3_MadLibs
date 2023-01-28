@@ -27,6 +27,8 @@ html {
   }
 #start{
   display: contents;
+  border: yellow; 
+  padding: 100px;
 }
 #form{
   margin: auto;  
