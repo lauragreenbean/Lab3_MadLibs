@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <script>
-               
+            
+        function myFunction() {
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("form").style.display = "block";
+        }
     </script>
 </head>
 
@@ -18,11 +22,10 @@
         <p>Click the button below to start the game!</p>
         <button onclick="myFunction()">Start Game</button> 
         <!-- once the button is clicked, the intro div will disappear and the form div will appear -->
+
     </div>
 
-    <div id="form"> 
-
-  
+    <div id="form">
         <form method="git">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required>
@@ -35,12 +38,7 @@
             <label for="adverb">Adverb:</label>
             <input type="text" name="adverb" id="adverb" required>
             <input type="submit" value="Submit">
-        <script>
-            function myFunction() {
-                document.getElementById("intro").style.display = "none";
-                document.getElementById("form").style.display = "block";
-            }
-            </script>
+        
 
         </div>
 
