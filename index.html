@@ -32,12 +32,25 @@
                 var adverb = document.getElementById("adverb").value;
                 document.getElementById("form").innerHTML = "These " + adjective + " " + noun + " " + verb + " " + adverb + " to the store.";
             });
-
+            /*show user input from form*/
+            document.getElementById("submit").addEventListener("click", function(event){
+            event.preventDefault();
+            var noun = document.getElementById("noun").value;
+            var verb = document.getElementById("verb").value;
+            var adjective = document.getElementById("adjective").value;
+            var adverb = document.getElementById("adverb").value;
+            console.log(noun, verb, adjective, adverb);
+        });
             /*show user input from form*/   
                
     </script>
-    <div> 
+≈    <script>
+        
+    </script>
+
+    <div id="formDiv"> 
         <!--create form for user to enter words*/-->
+       <!-- when we click the button, we want to display the form -->
         <form method="git" id="form">
             <label for="noun">Noun:</label>
             <input type="text" id="noun" name="noun"><br><br>
@@ -49,13 +62,7 @@
             <input type="text" id="adverb" name="adverb"><br><br>
             <button onclick="myFunction() id=submit">submit</button>
             <!--display form -->
-
-    
         </form>
-
-        
-
-
         </div>
     </div>
 </body>
