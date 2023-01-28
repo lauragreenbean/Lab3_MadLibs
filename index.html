@@ -7,20 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <script>
-        /* function that hides form div while intro div is visible */
-        /* This function will hide the intro div and show the form div after clicking start game button */
+        /* when page is loaded show intro div and hide form div */
         
         function myFunction() {
-            var x = document.getElementById("intro");
-            var y = document.getElementById("form");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-                y.style.display = "none";
-            } else {
-                x.style.display = "none";
-                y.style.display = "none";
-            }
-        }               
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("form").style.display = "block";
+        }
+        
+
 
     </script>
 </head>
