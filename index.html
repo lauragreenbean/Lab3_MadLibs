@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <script>
-        /* if the intro div is shown, hide the form div */
-        document.getElementById("form").style.display = "none"; 
+        /* function that hides form div while intro div is visible */
         /* This function will hide the intro div and show the form div after clicking start game button */
+        
         function myFunction() {
             var x = document.getElementById("intro");
             var y = document.getElementById("form");
@@ -20,8 +20,7 @@
                 x.style.display = "none";
                 y.style.display = "none";
             }
-        }        
-       
+        }               
 
     </script>
 </head>
@@ -34,9 +33,8 @@
         <button onclick="myFunction()" id="start">Start Game</button> 
 
     </div>
-
     <div id="form">
-        <form method="git">
+        <form method="git" style="visibility: visible;"</style>>
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required>
             <label for="adjective">Adjective:</label>
