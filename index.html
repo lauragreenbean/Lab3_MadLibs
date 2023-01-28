@@ -15,13 +15,22 @@
     <button onclick="myFunction()">Welcome!</button>
     <p id="demo"></p>
     <script>
-        function myFunction() {
+        /*function myFunction() {
             var person = prompt("Please enter your name", " ");
             if (person != null) {
                 document.getElementById("demo").innerHTML =
                 "Hello " + person + "! How are you today?";
-            }
-        
+            } /*
+            
+            /*output input from user*/
+            document.getElementById("form").addEventListener("submit", function(event){
+                event.preventDefault();
+                var noun = document.getElementById("noun").value;
+                var verb = document.getElementById("verb").value;
+                var adjective = document.getElementById("adjective").value;
+                var adverb = document.getElementById("adverb").value;
+                document.getElementById("output").innerHTML = "The " + adjective + " " + noun + " " + verb + " " + adverb + " to the store.";
+            });
     } </script>
     <div> 
         /*create form for user to enter words*/
