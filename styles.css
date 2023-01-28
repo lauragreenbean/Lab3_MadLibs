@@ -6,14 +6,11 @@ html {
   body {
     background-color: powderblue;
     margin-bottom: 600px;
-    margin-top: 600px;
-    margin-left: 600px;
-
-    ;
-
-    /* Margin bottom by footer height */
+  
   }
-
+.intro{
+    margin:auto
+}
   .footer {
     position: absolute;
     bottom: 0;
