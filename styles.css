@@ -26,9 +26,8 @@ html {
     background-color: #f5f5f5;
   }
 #start{
-  display: contents;
-  border: yellow; 
-  padding: 100px;
+  margin: auto;
+  background-color: purple;
 }
 #form{
   margin: auto;  
