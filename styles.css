@@ -27,5 +27,6 @@ html {
   }
 
 .form{
-    background-color: purple;
+  margin: auto;  
+  background-color: purple;
 }
