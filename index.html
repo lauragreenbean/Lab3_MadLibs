@@ -30,7 +30,6 @@
                 var adverb = document.getElementById("adverb").value;
                 document.getElementById("form").innerHTML = "These " + adjective + " " + noun + " " + verb + " " + adverb + " to the store.";
             });
-    <button onclick="myFunction()">submit</button>
 
             /*show user input from form*/   
                
@@ -46,7 +45,9 @@
             <input type="text" id="adjective" name="adjective"><br><br>
             <label for="adverb">Adverb:</label>
             <input type="text" id="adverb" name="adverb"><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="submit">
+            <button onclick="myFunction()">submit</button>
+
 
         </div>
     </div>
