@@ -25,7 +25,9 @@ html {
     /* Vertically center the text there */
     background-color: #f5f5f5;
   }
-
+#start{
+  display: contents;
+}
 #form{
   margin: auto;  
   background-color: purple;
