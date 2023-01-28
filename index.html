@@ -52,6 +52,8 @@
             <input type="text" id="adverb" name="adverb"><br><br>
             <button onclick="myFunction()" id="submitbtn"> submit</button>
             <!--display form -->
+            
+        </form>
             <script>
                 document.getElementById("submitbtn").addEventListener("click", function(event){
                 event.preventDefault();
@@ -61,7 +63,6 @@
                 var adverb = document.getElementById("adverb").value;
                 console.log(noun, verb, adjective, adverb);
             });</script>
-        </form>
         </div>
     </div>
 </body>
