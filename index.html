@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="intro">
-    <h1>Laura's Mad Libs</h1>
+        <h1>Laura's Mad Libs</h1>
     <p>Click the button to enter your name.</p>
     <button onclick="myFunction()">Welcome!</button>
     <p id="demo"></p>
@@ -21,7 +21,22 @@
                 document.getElementById("demo").innerHTML =
                 "Hello " + person + "! How are you today?";
             }
-        }
+        
+    }
+    <div id=forms> 
+        /*create form for user to enter words*/
+        <form action="madlibs.php" method="post">
+            <label for="noun">Noun:</label>
+            <input type="text" id="noun" name="noun"><br><br>
+            <label for="verb">Verb:</label>
+            <input type="text" id="verb" name="verb"><br><br>
+            <label for="adjective">Adjective:</label>
+            <input type="text" id="adjective" name="adjective"><br><br>
+            <label for="adverb">Adverb:</label>
+            <input type="text" id="adverb" name="adverb"><br><br>
+            <input type="submit" value="Submit">
+
+        </div>
     </script> </div>
 </body>
 
