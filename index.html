@@ -19,10 +19,12 @@
                 x.style.display = "none";
                 y.style.display = "block";
             }
+            document.getElementById("form").style.display = "none";
+
         }
-        /*do not show form div until start game button is clicked */
-        document.getElementById("form").style.display = "none";
+        /*hide form until start button is clicked*/
         
+
         
     </script>
 </head>
@@ -48,8 +50,6 @@
             <input type="text" name="verb" id="verb" required>
             <label for="adverb">Adverb:</label>
             <input type="text" name="adverb" id="adverb" required>
-            <!-- if button is clicked display --> 
-            
             <input type="submit" value="Submit">
     
 
