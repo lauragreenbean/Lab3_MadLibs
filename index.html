@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <script>
             
+        /* This function will hide the intro div and show the form div */
         function myFunction() {
-            document.getElementById("intro").style.display = "none";
-            document.getElementById("form").style.display = "block";
+            var x = document.getElementById("intro");
+            var y = document.getElementById("form");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
         }
     </script>
 </head>
