@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lab 3: Mad Libs Project</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Lab 3: Mad Libs Project</h1>
+    <p>Generate your own adventure!</p>
+    <!-- create form inputs and submit button -->
+    <form method="get" id="form">
+        <div class="form-group">          
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div> 
+        <br><br>
+        <div class="form-group">          
+            <label for="adjective">Adjective:</label>
+            <input type="text" id="adjective" name="adjective" placeholder="Enter an adjective">
+        </div>
+        <br><br>
+
+        <div class="form-group">          
+            <label for="noun">Noun:</label>
+            <input type="text" id="noun" name="noun" placeholder="Enter a noun">
+        </div>
+        <br><br>
+
+        <div class="form-group">          
+            <label for="verb">Verb:</label>
+            <input type="text" id="verb" name="verb" placeholder="Enter a verb">
+        </div>
+        <br><br>
+
+        <div class="form-group">          
+            <label for="adverb">Adverb:</label>
+            <input type="text" id="adverb" name="adverb" placeholder="Enter an adverb">
+        </div>
+        <br><br>
+
+        <div class="form-group">          
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter an location">
+        </div>
+        <br><br>
+      <button id="submit" type="submit" class="btn">Submit</button>
+    </form>
+    <div id="story">
+        <p> </p>
+    </div>
+  </div>
+  
+  
+</body>
+<script>
+    // When we click the submit button, log the values of the form inputs.
+    document.getElementById('submit').addEventListener('click', function (event){
+          console.log(urlParams.get('name').value);
+          console.log(urlParams.get('adjective').value);
+          console.log(urlParams.get('noun').value);
+          console.log(urlParams.get('verb').value);
+          console.log(urlParams.get('adverb').value);
+          console.log(urlParams.get('location').value);
+  
+      // Hide the form.
+      document.getElementById('form').style.display = 'none';
+
+      //get parameters and add to the story
+      document.getElementById('story').innerHTML = urlParams.get('name') + ' is a ' + urlParams.get('adjective') + ' in ' + urlParams.get('noun') + ' blach ' + urlParams.get('verb') + ' '+ urlParams.get('adverb') + ' ' +'in' + ' ' + urlParams.get('location').value;
+    });
+  
+    // Get the URL parameters and add them to the story.
+    var urlParams = new URLSearchParams(window.location.search);
+      document.getElementById('name');
+      document.getElementById('adjective');
+      document.getElementById('noun');
+      document.getElementById('verb');
+      document.getElementById('adverb');
+      document.getElementById('location');
+  
+  
+    // If we have the parameters, hide the form and show the story.
+    if (urlParams.get('name') && urlParams.get('adjective') && urlParams.get('noun') && urlParams.get('verb') && urlParams.get('adverb') && urlParams.get('location')) {
+      document.getElementById('form').style.display = 'none';
+      document.getElementById('story').innerHTML = urlParams.get('name') + ' is a ' + urlParams.get('adjective') + ' in ' + urlParams.get('noun') + ' blach ' + urlParams.get('verb') + ' '+ urlParams.get('adverb') + ' ' +'in' + ' ' + urlParams.get('location');
+    }
+  
+    // Add a button to the story to clear the form.
+    document.getElementById('story').innerHTML += '<br><a class="btn "href="index.html">Clear the form</a>';
+  
+  </script>
+
+</html>
