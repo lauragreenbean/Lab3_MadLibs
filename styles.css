@@ -29,7 +29,29 @@ html {
   margin: auto;
   background-color: rgb(248, 91, 248);
 }
-#form{
+/*#form{
   margin: auto;  
   background-color: purple;
+}*/
+
+#section1{
+  margin: auto;
+  background-color: rgb(248, 91, 248);
+  padding: 100px;
+  text-align: center;
+
+}
+#instruction{
+  margin: auto;
+  background-color: rgb(163, 161, 251);
+  padding: 100px;
+  text-align: center;
+
+}
+#form{
+  margin: auto;
+  background-color: rgb(130, 77, 244);
+  padding: 100px;
+  text-align: center;
+
 }

@@ -7,35 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <script>
-        /* when page is loaded show intro div and hide form div */
-        /* on page load hide form div */
-        window.onload = function() {
-            document.getElementById("form").style.display = "none";
-            document.getElementById("story").style.display = "none";
+        /* document.getElementById('submit').addEventListener('click', function (event) {
+            console.log(document.getElementById('name').value);
+            console.log(document.getElementById('adjective').value);
+            console.log(document.getElementById('noun').value);
+            console.log(document.getElementById('verb').value);
+            console.log(document.getElementById('adverb').value);
 
-        }
-        /*if start button is clicked, hide intro div and show form div */   
-        function hideFunction() {
-            document.getElementById("intro").style.display = "none";
-            document.getElementById("form").style.display = "block";
-            document.getElementById("story").style.display = "block";
-        }
-        document.getElementById("startGame").addEventListener("click", madLibFunction);
+        // Hide the form.
+        document.getElementById('form').style.display = 'none';
 
-        /*when submit button is clicked, get values from form and put them in story div */
-        function madLibFunction() {
-            var name = document.getElementById("name").value;
-            var adjective = document.getElementById("adjective").value;
-            var noun = document.getElementById("noun").value;
-            var verb = document.getElementById("verb").value;
-            var adverb = document.getElementById("adverb").value;
-            document.getElementById("name").innerHTML = name;
-            document.getElementById("adjective").innerHTML = adjective;
-            document.getElementById("noun").innerHTML = noun;
-            document.getElementById("verb").innerHTML = verb;
-            document.getElementById("adverb").innerHTML = adverb;
-            
-        }
+        // Jake is a programmer in Seattle.
+        document.getElementById('story').innerHTML = document.getElementById('person').value + ' is a ' + document.getElementById('verb').value + ' in ' + document.getElementById('noun').value;
+  });*/
+    if (document.getElementById('submit').addEventListener('click', function (event) {
+        console.log(document.getElementById('name').value);
+        console.log(document.getElementById('adjective').value);
+        console.log(document.getElementById('noun').value);
+        console.log(document.getElementById('verb').value);
+        console.log(document.getElementById('adverb').value);
+        document.getElementById('story').innerHTML = 'Once upon a time, there was a' + urlParams.get('name') + ' who was very ' + urlParams.get('adjective') + ' One day, they decided to go on a walk. They saw a ' + urlParams.get('noun') + 'and decided to' + urlParams.get('verb') + urlParams.get('adverb').value;
+    })); {
+        document.getElementById('form').style.display = 'none';
+    }
+    
+    document.getElementById('story').innerHTML = 'Once upon a time, there was a' + urlParams.get('name') + ' who was very ' + urlParams.get('adjective') + ' One day, they decided to go on a walk. They saw a ' + urlParams.get('noun') + 'and decided to' + urlParams.get('verb') + urlParams.get('adverb');
+    document.getElementById('story').style.display = 'display';
+
     </script>
 </head>
 
@@ -44,25 +42,34 @@
         <h1>Laura's Mad Libs</h1>
         <p>Mad Libs is a phrasal template word game where one player prompts others for a list of words to substitute for blanks in a story, before reading the – often comical or nonsensical – story aloud. The game is frequently played as a party game or as a pastime.</p>
         <p>Click the button below to start the game!</p>
-        <button onclick="myFunction()" id="startGame">Start Game</button> 
-    </div>
-    <div id="form">
-        <form method="git">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
-            <label for="adjective">Adjective:</label>
-            <input type="text" name="adjective" id="adjective" required>
-            <label for="noun">Noun:</label>
-            <input type="text" name="noun" id="noun" required>
-            <label for="verb">Verb:</label>
-            <input type="text" name="verb" id="verb" required>
-            <label for="adverb">Adverb:</label>
-            <input type="text" name="adverb" id="adverb" required>
-            <input type="submit" value="Submit">
-        </div>
-        <div id="story"> 
-            <p >Once upon a time, there was a <span id="name"></span> who was very <span id="adjective"></span>. One day, they decided to go on a walk. They saw a <span id="noun"></span> and decided to <span id="verb"></span> it. They <span id="adverb"></span> ran away.</p>
-        </div>
+
+
+        <form id="myForm" action="Results.aspx" method="get" name="myForm" onsubmit="return validateForm()"">
+           
+            <div class="form-group">          
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div> 
+            <div class="form-group">          
+                <label for="adjective">Adjective:</label>
+                <input type="text" id="adjective" name="adjective" placeholder="Enter an adjective">
+            </div>
+            <div class="form-group">          
+                <label for="noun">Noun:</label>
+                <input type="text" id="noun" name="noun" placeholder="Enter a noun">
+            </div>
+            <div class="form-group">          
+                <label for="verb">Verb:</label>
+                <input type="text" id="verb" name="verb" placeholder="Enter a verb">
+            </div>
+            <div class="form-group">          
+                <label for="adverb">Adverb:</label>
+                <input type="text" id="adverb" name="adverb" placeholder="Enter an adverb">
+            </div>
+            <div class="form-group">          
+                <input type="submit" id="submit" value="Submit">
+            </div>
+        </form>
 </body>
 
 
