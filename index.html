@@ -18,8 +18,9 @@
         function hideFunction() {
             document.getElementById("intro").style.display = "none";
             document.getElementById("form").style.display = "block";
-        } 
-
+            document.getElementById("story").style.display = "block";
+        }
+        document.getElementById("startGame").addEventListener("click", madLibFunction);
 
         /*when submit button is clicked, get values from form and put them in story div */
         function madLibFunction() {
