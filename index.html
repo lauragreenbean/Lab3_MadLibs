@@ -11,14 +11,30 @@
         /* on page load hide form div */
         window.onload = function() {
             document.getElementById("form").style.display = "none";
+            document.getElementById("story").style.display = "none";
+
         }
-        /*if start button is clicked, hide intro div and show form div */
-        function myFunction() {
+        /*if start button is clicked, hide intro div and show form div */   
+        function hideFunction() {
             document.getElementById("intro").style.display = "none";
             document.getElementById("form").style.display = "block";
         } 
 
 
+        /*when submit button is clicked, get values from form and put them in story div */
+        function madLibFunction() {
+            var name = document.getElementById("name").value;
+            var adjective = document.getElementById("adjective").value;
+            var noun = document.getElementById("noun").value;
+            var verb = document.getElementById("verb").value;
+            var adverb = document.getElementById("adverb").value;
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("adjective").innerHTML = adjective;
+            document.getElementById("noun").innerHTML = noun;
+            document.getElementById("verb").innerHTML = verb;
+            document.getElementById("adverb").innerHTML = adverb;
+            
+        }
     </script>
 </head>
 
@@ -27,8 +43,7 @@
         <h1>Laura's Mad Libs</h1>
         <p>Mad Libs is a phrasal template word game where one player prompts others for a list of words to substitute for blanks in a story, before reading the – often comical or nonsensical – story aloud. The game is frequently played as a party game or as a pastime.</p>
         <p>Click the button below to start the game!</p>
-        <button onclick="myFunction()" id="start">Start Game</button> 
-
+        <button onclick="myFunction()" id="startGame">Start Game</button> 
     </div>
     <div id="form">
         <form method="git">
@@ -44,7 +59,10 @@
             <input type="text" name="adverb" id="adverb" required>
             <input type="submit" value="Submit">
         </div>
-
+        <div id="story"> 
+            <p >Once upon a time, there was a <span id="name"></span> who was very <span id="adjective"></span>. One day, they decided to go on a walk. They saw a <span id="noun"></span> and decided to <span id="verb"></span> it. They <span id="adverb"></span> ran away.</p>
+        </div>
 </body>
+
 
 </html>
