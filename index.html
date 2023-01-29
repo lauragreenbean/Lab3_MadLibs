@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <script>
         /* when page is loaded show intro div and hide form div */
-        
-        function myFunction() {
-            document.getElementById("intro").style.display = "block";
+        /* on page load hide form div */
+        window.onload = function() {
             document.getElementById("form").style.display = "none";
         }
-
+        /*if start button is clicked, hide intro div and show form div */
+        function myFunction() {
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("form").style.display = "block";
+        } 
 
 
     </script>
