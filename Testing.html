@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title> Testing Laura Green Lab 3: Mad Libs</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <script>
+       document.getElementById('submit').addEventListener('click', function (event) {
+        console.log(document.getElementById('name').value);
+        console.log(document.getElementById('adjective').value);
+        console.log(document.getElementById('noun').value);
+        console.log(document.getElementById('verb').value);
+        console.log(document.getElementById('adverb').value);
+
+        document.getElementById('story').innerHTML = urlParams.get('name') + ' is a ' + urlParams.get('adjective') + ' in ' + urlParams.get('noun') + urlParams.get('verb') + urlParams.get('adverb').value;
+       });
+
+       
+       
+       /* when page is loaded hide form div 
+        /*function that will use the url parameters to display the story*/
+        
+            /*when submit button is clicked take the url parameters and display them in the story*/
+            var urlParams = new URLSearchParams(window.location.search);
+            (document.getElementById('name').value);
+            (document.getElementById('adjective').value);
+            (document.getElementById('noun').value);
+            (document.getElementById('verb').value);
+            (document.getElementById('adverb').value);
+
+
+        
+         
+        if (urlParams.get('name') && urlParams.get('adjective') && urlParams.get('noun') && urlParams.get('verb') && urlParams.get('adverb')) {
+                document.getElementById('form').style.display = 'none';
+                document.getElementById('story').innerHTML = urlParams.get('name') + ' is a ' + urlParams.get('adjective') + ' in ' + urlParams.get('noun') + urlParams.get('verb') + urlParams.get('adverb');
+
+            };
+        
+    </script>
+</head>
+    <body>
+        <div id="section1">
+            <h1>Mad Libs Game: the maddest libs in the world!</h1>
+            <p>
+                Mad Libs is a phrasal template word game where one player prompts others for a list of words to substitute for blanks in a story, before reading the – often comical or nonsensical – story aloud. The game is frequently played as a party game or as a pastime.     
+            </p>
+        </div>
+
+        <div id="form">
+            <form method="get">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="adjective">Adjective:</label>
+                <input type="text" name="adjective" id="adjective" required>
+                <label for="noun">Noun:</label>
+                <input type="text" name="noun" id="noun" required>
+                <label for="verb">Verb:</label>
+                <input type="text" name="verb" id="verb" required>
+                <label for="adverb">Adverb:</label>
+                <input type="text" name="adverb" id="adverb" required>
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+        <div id="story"> 
+            <!-- take urlParams and use them to fill in the story 
+            <p>Once upon a time, there was a <span id="name"></span> who was very <span id="adjective"></span>. One day, they decided to go on a walk. They saw a <span id="noun"></span> and decided to <span id="verb"></span> it. They <span id="adverb"></span> ran away.</p>
+       -->
+        </div>
+
+        </div>
+    </body>
+</html>
